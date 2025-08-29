@@ -25,5 +25,36 @@
   <div id="preview"></div>
   <button id="downloadBtn" style="display:none;">Download HTML</button>
   <script src="script.js"></script>
+<!-- ========== AI Builder Controls ========== -->
+<div style="display:grid; gap:8px; max-width:840px; margin:16px auto; padding:12px; border:1px solid #ddd; border-radius:12px">
+  <div style="display:flex; gap:8px; flex-wrap:wrap">
+    <input id="aiPrompt" type="text" placeholder="Apna idea likho… (e.g., Portfolio website, To-do app)"
+           style="flex:1; padding:10px; border:1px solid #ccc; border-radius:8px">
+    <select id="aiMode" style="padding:10px; border:1px solid #ccc; border-radius:8px">
+      <option value="chat">ChatGPT Style</option>
+      <option value="web">Web Builder (HTML)</option>
+      <option value="app">App Builder (HTML+JS)</option>
+    </select>
+    <button id="aiRunBtn" onclick="runAI(document.getElementById('aiMode').value, document.getElementById('aiPrompt').value)"
+            style="padding:10px 14px; border:none; border-radius:8px; cursor:pointer">
+      <span id="aiSpinner" style="display:none">⏳</span> Run AI
+    </button>
+  </div>
+
+  <textarea id="aiOutput" rows="10" spellcheck="false"
+            placeholder="AI output/code yahan aayega…"
+            style="width:100%; padding:10px; border:1px solid #ccc; border-radius:8px; font-family:ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;"></textarea>
+
+  <div style="display:flex; gap:8px; align-items:center">
+    <button onclick="previewOutput()" style="padding:8px 12px; border:1px solid #ccc; border-radius:8px; cursor:pointer">
+      Preview in Frame
+    </button>
+    <small>Tip: Agar yeh pure HTML page hai to neeche preview me render ho jayega.</small>
+  </div>
+
+  <iframe id="aiPreview" style="width:100%; height:460px; border:1px solid #eee; border-radius:12px"></iframe>
+</div>
+<!-- ========== /AI Builder Controls ========== -->
+<script src="ai.js"></script>
 </body>
 </html>
