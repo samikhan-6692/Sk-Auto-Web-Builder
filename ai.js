@@ -1,3 +1,5 @@
+const GEMINI_API_KEY = "YOUR_GEMINI_API_KEY";
+const HF_API_KEY = "YOUR_HF_API_KEY";
 /* ============ AI CONFIG (keys lagao) ============ */
 // Google Gemini (free quota): https://aistudio.google.com
 const GEMINI_API_KEY = "YOUR_GEMINI_API_KEY";
