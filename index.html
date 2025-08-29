@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Simple AI Website Builder</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Simple AI Website Builder</h1>
+  <form id="siteForm">
+    <label>
+      Site Title:
+      <input type="text" id="title" required>
+    </label>
+    <label>
+      Main Color:
+      <input type="color" id="color" value="#3498db">
+    </label>
+    <label>
+      Section Text:
+      <textarea id="sectionText" required></textarea>
+    </label>
+    <button type="submit">Generate Website</button>
+  </form>
+  <div id="preview"></div>
+  <button id="downloadBtn" style="display:none;">Download HTML</button>
+  <script src="script.js"></script>
+</body>
+</html>
