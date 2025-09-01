@@ -40,3 +40,22 @@ document.getElementById('siteForm').addEventListener('submit', function(e) {
     link.click();
   }
 });
+function openTool(tool) {
+  switch(tool) {
+    case 'website':
+      alert("AI Website Builder Opened!");
+      break;
+    case 'app':
+      alert("AI App Builder Opened!");
+      break;
+    case 'browser':
+      alert("AI Browser Opened!");
+      break;
+    case 'wallet':
+      alert("AI Wallet Creator Opened!");
+      break;
+    case 'protect':
+      alert("AI Protect System Activated!");
+      break;
+  }
+}
